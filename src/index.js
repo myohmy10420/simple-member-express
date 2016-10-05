@@ -1,11 +1,14 @@
 import express from "express";
 import bodyParser from "body-parser";
+import fs from 'fs';
 
 import * as home from "./home";
 import * as user from './user'
 
 const port = process.env.PORT || 3000;
 const app =  express();
+
+fs.writeFileSync('passwd.txt', '{}');
 
 app.locals.secret = "YOU-ACNT-SEE-ME";
 
