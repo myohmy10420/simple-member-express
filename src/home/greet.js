@@ -1,3 +1,10 @@
 export default function greet(req, res) {
-  res.send('hello world');
+  const {greeting} = res.locals;
+
+  if (greeting) {
+  res.send(greeting);
+  }
+  else {
+    res.send("123hello world");
+  }
 }
