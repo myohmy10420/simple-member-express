@@ -8,7 +8,8 @@
   <a href="/">Back to Home Page</a>
   <h1>Login Page</h1>
 
-  <form method="POST" action="/login">
+  <form method="POST" action="api/login">
+    <input id="csrfToken" type="hidden" name="csrfToken" />
     <label>
       <span>username</span>
       <input type="text" name="username" placeholder="username" />
@@ -19,5 +20,6 @@
     </label>
     <button type="submit">Login</button>
   </form>
+  <script src="setCsrfToken.js"></script>
 </body>
 </html>

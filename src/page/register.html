@@ -10,7 +10,8 @@
 
   <h1>Registration Page</h1>
 
-  <form method="POST" action="/register">
+  <form method="POST" action="api/register">
+    <input id="csrfToken" type="hidden" name="csrfToken" />
     <label>
       <span>username</span>
       <input type="text" name="username" placeholder="username" />
@@ -21,5 +22,6 @@
     </label>
     <button type="submit">Submit</button>
   </form>
+  <script src="setCsrfToken.js"></script>
 </body>
 </html>
