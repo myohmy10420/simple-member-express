@@ -8,7 +8,7 @@ export default function login(req, res) {
   const data = JSON.parse(json);
   const row = data[username];
 
-  if (row && bcrypt.hashSync(password, row.password)) {
+  if (row && bcrypt.compareSync(password, row.password)) {
     return res.send(`Login Successfully. Hello ! ${username}`);
   }
   res.status(404)
