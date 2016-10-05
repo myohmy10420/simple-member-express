@@ -5,10 +5,20 @@
   <title>Page Registration</title>
 </head>
 <body>
-  <h1>Registration</h1>
+
+  <a href="/">Back to Home Page</a>
+
+  <h1>Registration Page</h1>
+
   <form method="POST" action="/register">
-    <input type="text" name="username" />
-    <input type="password" name="password" />
+    <label>
+      <span>username</span>
+      <input type="text" name="username" placeholder="username" />
+    </label>
+    <label>
+      <span>password</span>
+      <input type="password" name="password" placeholder="password" />
+    </label>
     <button type="submit">Submit</button>
   </form>
 </body>
