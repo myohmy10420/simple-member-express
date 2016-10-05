@@ -1,0 +1,1 @@
+export staticDemo from "./staticDemo";

@@ -1,6 +1,7 @@
 import express from "express";
 import bodyParser from "body-parser";
 
+import * as demo from "./demo";
 import * as home from "./home";
 import * as err from "./err";
 import * as user from "./user";
@@ -13,6 +14,8 @@ app.locals.secret = "YOU-ACNT-SEE-ME";
 app.use(bodyParser.urlencoded({extended: false}));
 
 app.get("/", home.greet, home.getName);
+
+app.get("/demo", demo.staticDemo)
 
 app.get("/err", err.throwError);
 
