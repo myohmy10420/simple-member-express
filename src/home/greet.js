@@ -5,6 +5,6 @@ export default function greet(req, res) {
   res.send(greeting);
   }
   else {
-    res.send("123hello world");
+    res.send("hello world");
   }
 }
