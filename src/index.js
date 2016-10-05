@@ -8,13 +8,15 @@ import * as user from "./user";
 const port = process.env.PORT || 3000;
 const app =  express();
 
+app.locals.secret = "YOU-ACNT-SEE-ME";
+
 app.use(bodyParser.urlencoded({extended: false}));
 
 app.get("/", home.greet, home.getName);
 
 app.get("/err", err.throwError);
 
-app.post("./login", user.getUser, user.login)
+app.post("/login", user.getUser, user.login)
 
 app.use((err, req, res, next) => {
   console.error("Error: %s", err);
