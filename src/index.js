@@ -2,7 +2,6 @@ import express from "express";
 import bodyParser from "body-parser";
 import fs from 'fs';
 
-import * as home from "./home";
 import * as user from './user'
 
 const port = process.env.PORT || 3000;
@@ -16,7 +15,6 @@ app.use(bodyParser.urlencoded({extended: false}));
 
 app.use(express.static('public'));
 
-app.get("/", home.greet, home.getName);
 app.post('/login', user.login);
 app.post('/register', user.register);
 
