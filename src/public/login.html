@@ -5,9 +5,18 @@
   <title>Page Login</title>
 </head>
 <body>
+  <a href="/">Back to Home Page</a>
+  <h1>Login Page</h1>
+
   <form method="POST" action="/login">
-    <input type="text" name="username" />
-    <input type="password" name="password" />
+    <label>
+      <span>username</span>
+      <input type="text" name="username" placeholder="username" />
+    </label>
+    <label>
+      <span>password</span>
+      <input type="text" name="password" placeholder="password" />
+    </label>
     <button type="submit">Login</button>
   </form>
 </body>
