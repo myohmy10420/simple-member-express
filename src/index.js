@@ -15,6 +15,7 @@ app.use(express.static('public'));
 
 app.get("/", home.greet, home.getName);
 app.post('/login', user.login);
+app.post('/register', user.register);
 
 app.use((err, req, res, next) => {
   console.error("Error: %s", err);
