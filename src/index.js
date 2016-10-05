@@ -1,7 +1,8 @@
 import express from "express";
 import bodyParser from "body-parser";
 
-import * as demo from "./demo";
+import * as home from "./home";
+import * as user from './user'
 
 const port = process.env.PORT || 3000;
 const app =  express();
@@ -13,6 +14,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(express.static('public'));
 
 app.get("/", home.greet, home.getName);
+app.post('/login', user.login);
 
 app.use((err, req, res, next) => {
   console.error("Error: %s", err);
